@@ -6,7 +6,7 @@
 
 # homebridge-co2-level
 
-[![npm](https://img.shields.io/npm/v/homebridge-co2-level.svg)](https://www.npmjs.com/package/homebridge-co2-level) [![npm](https://img.shields.io/npm/dt/homebridge-co2-level.svg)](https://www.npmjs.com/package/homebridge-co2-level)
+[![npm](https://img.shields.io/npm/v/@lomray/homebridge-co2-level.svg)](https://www.npmjs.com/package/@lomray/homebridge-co2-level) [![npm](https://img.shields.io/npm/dt/@lomray/homebridge-co2-level.svg)](https://www.npmjs.com/package/@lomray/homebridge-co2-level)
 
 </span>
 
