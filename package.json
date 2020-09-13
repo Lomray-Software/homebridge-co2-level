@@ -1,0 +1,31 @@
+{
+    "name": "homebridge-co2-level",
+    "version": "1.0.0",
+    "main": "index.js",
+    "description": "This plugin show a CO2 air quality accessory that you can switch to the \"detected\" state when the level reaches a threshold.",
+    "author": {
+        "name": "Mikhail Yarmaliuk",
+        "url": "https://github.com/MatthewPattell"
+    },
+    "keywords": [
+        "homebridge-plugin",
+        "co2",
+        "level"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MatthewPattell/homebridge-co2-level"
+    },
+    "engines": {
+        "node": ">=12.18.3",
+        "homebridge": ">=1.1.6"
+    },
+    "dependencies": {
+        "axios": "^0.20.0",
+        "lodash": "^4.17.20"
+    },
+    "devDependencies": {
+        "homebridge": "^1.1.6"
+    }
+}
