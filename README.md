@@ -15,7 +15,7 @@
 This plugin shows a CO2 air quality accessory that you can switch to the "detected" state when the level reaches a threshold.
 
 Example config:
-```json
+```
 {
     axiosConfig: {
         url:     'http://example.loc', // get CO2 data
