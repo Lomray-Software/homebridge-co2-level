@@ -39,13 +39,14 @@ function CO2Accessory(log, conf) {
 		interval:  60, // in seconds
 		threshold: 1000, // in ppm
 		debug:     false,
+		defaultIsNeedLogin: false,
 	};
 
 	this.config        = _.merge(defaultConfig, conf);
 	this.log           = message => this.config.debug && log(message);
 	this.name          = this.config.name;
 	this.isCO2Detected = 0;
-	this.needLogin     = true;
+	this.needLogin     = this.config.defaultIsNeedLogin;
 	this.co2Value      = 0;
 
 	this.service = new Service.CarbonDioxideSensor(this.name);
@@ -116,7 +117,13 @@ CO2Accessory.prototype.loginApi = function () {
 CO2Accessory.prototype.getCo2Level = function (callback) {
 	const isNeedLogin = (message, status) => {
 		const msg = typeof message === 'object' ? JSON.stringify(message) : (message || '');
-		if (msg.includes('Login') || msg.includes('login') || status === 401) {
+		if (
+			status === 401 ||
+			msg.includes('Login') ||
+			msg.includes('login') ||
+			msg.includes('unauthorized') ||
+			msg.includes('Unauthorized')
+		) {
 			this.needLogin = true;
 		}
 	};
