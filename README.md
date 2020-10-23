@@ -18,17 +18,19 @@ Example config:
 ```
 "accessories": [
 	{
-		axiosConfig: {
-			url:     'http://example.loc', // get CO2 data
-			method:  'GET',
-			timeout: 3000, // request timeout
+	    "accessory": "co2-level",
+		"name": "CO2",
+		"axiosConfig": {
+			"url":     "http://example.loc", // get CO2 data
+			"method":  "GET",
+			"timeout": 3000, // request timeout
 		},
-		loginUrl:    'http://example.loc/?login=1', // not required. If need login before request CO2 value
-		valuePath:   'data.ADC.value', // Path to obtain value from response
-		calculate:   'ppm', // ppm,percent,none
+		"loginUrl":    "http://example.loc/?login=1", // not required. If need login before request CO2 value
+		"valuePath":   "data.ADC.value", // Path to obtain value from response
+		"calculate":   "ppm", // ppm,percent,none
 
-		interval:  20, // refresh interval in seconds
-		threshold: 1000, // set alarm detect in ppm or % (depends on `calculate`)
+		"interval":  20, // refresh interval in seconds
+		"threshold": 1000, // set alarm detect in ppm or % (depends on `calculate`)
 	},
 ]
 ```
