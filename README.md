@@ -18,7 +18,7 @@ Example config:
 ```
 "accessories": [
 	{
-	    "accessory": "co2-level",
+		"accessory": "co2-level",
 		"name": "CO2",
 		"axiosConfig": {
 			"url":     "http://example.loc", // get CO2 data
