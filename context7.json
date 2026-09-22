@@ -1,0 +1,25 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "homebridge-co2-level",
+  "description": "Homebridge accessory polling an HTTP CO2 sensor endpoint.",
+  "branch": "master",
+  "folders": [],
+  "excludeFolders": [
+    "node_modules",
+    ".github",
+    "src",
+    "lib",
+    "dist",
+    "__tests__",
+    "__mocks__"
+  ],
+  "excludeFiles": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "CODE_OF_CONDUCT.md"
+  ],
+  "rules": [
+    "For already-converted ppm values use calculate: none; the ppm mode applies an analog conversion formula.",
+    "valuePath starts at the Axios response. Disable device-specific login with loginUrl: null when the sensor needs no login."
+  ]
+}
